@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Labo 2 - uitbreiding</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+        function SendToServer() {
+            fetch("http://localhost:3000/push", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({'test': 'test'})
+        }).then(res => console.log(res));
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="SendToServer()">Make server do push</button>
+</body>
+</html>

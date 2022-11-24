@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "mobile-iot-app",
+    "labo1": "mobile-iot-app",
+    "dist": "mobile-iot-app"
+  },
+  "targets": {},
+  "etags": {}
+}
