@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     s1.addEventListener('change', () => {p1.innerHTML = s1.value;});
 
     window.setInterval(()=>{
-      fetch("http://localhost:3000/api", {
+      fetch("https://proud-river-03cf1e803.2.azurestaticapps.net:3000/api", {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({'treshHoldTemperature': s1.value})
@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
         }))
           .then(function (subscription) {
             console.log('User is subscribed. subscription:' + JSON.stringify(subscription));
-            fetch("http://localhost:3000/register", {
+            fetch("https://proud-river-03cf1e803.2.azurestaticapps.net:3000/register", {
               method: 'POST',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify(subscription)
