@@ -31,13 +31,11 @@ app.post('/api',(req,res) => {
 app.post('/raspberry',(req,res) => {
     res.send("Data received.");
     temperature = req.body;
-    console.log(req.body);
 })
 
 app.post('/register',(req,res) => {
     console.log(JSON.stringify(req.body));
         if (!req.body || !req.body.endpoint) {
-            // Invalid subscription.
             res.status(400);
             res.send('Invalid subscription');
             return false;
